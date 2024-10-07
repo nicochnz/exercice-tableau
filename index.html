@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>La machinasse à café</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Welcome to : La <span>machinasse</span> à café</h1>
+  </body>
+
+  <script>
+    let choice = "";
+
+    let sugar = "";
+
+    let milk = "";
+
+    let kindOfMilk = "";
+
+    while (choice != "tea" && choice != "coffee") {
+      choice = prompt("Coffee or Tea ?");
+    }
+
+    sugar = prompt("Would you like some sugar ?");
+
+    while (sugar != "yes" && sugar != "no") {
+      sugar = prompt("Would you like some sugar ?");
+    }
+
+    milk = prompt("Would you like some milk ?");
+
+    if (milk === "yes") {
+      kindOfMilk = prompt("Would you like vegetal milk?");
+    } else if (milk === "no") {
+    }
+
+    let confirmation = `You have ordered ${choice} with ${
+      sugar === "yes" ? "sugar" : "no sugar"
+    } and ${
+      milk === "yes"
+        ? kindOfMilk === "yes"
+          ? "vegetal milk"
+          : "regular milk"
+        : "no milk"
+    }. Are you sure about your choice?`;
+
+    confirm(confirmation);
+  </script>
+</html>
